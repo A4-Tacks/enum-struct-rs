@@ -35,8 +35,8 @@ enum Foo {
 }
 impl Foo {
     fn id(&self) -> &u64 { /*...*/ }
-    fn id_mut(&self) -> &mut u64 { /*...*/ }
-    fn into_id(&self) -> u64 { /*...*/ }
+    fn id_mut(&mut self) -> &mut u64 { /*...*/ }
+    fn into_id(self) -> u64 { /*...*/ }
 }
 ```
 
