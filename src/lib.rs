@@ -65,7 +65,7 @@ pub fn fields(attr: TokenStream, adt: TokenStream) -> TokenStream {
         Ok(x) => x,
         Err(e) => return e.into_compile_error().into(),
     };
-    let fields = match syn::parse::<PunctedNamedFields>(attr.clone()) {
+    let fields = match syn::parse::<PunctedNamedFields>(attr) {
         Ok(it) => it,
         Err(err) => return err.into_compile_error().into(),
     };
